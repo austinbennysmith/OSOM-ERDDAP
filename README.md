@@ -9,9 +9,11 @@ Here is a brief summary of things you can explore through code in this repositor
 •	Comparisons between observations available in the ERDDAP server and OSOM output<br/>
 •	Other types of RIDDC ERDDAP data such as salinity, sea surface temperature, and wind stress
 
+# **How well does OSOM model Chlorophyll?**
+
+One of the key products of this summer research project was a comparison between model runs conducted by Professor Ullman and data available on the RIDDC ERDDAP server. In particular, I have focused on variables relating to phytoplankton. The RIDDC ERDDAP server contains satellite data from two different instruments, the MODIS satellite and Suomi-NPP/VIIRS. Both of the satellites measure chlorophyll a, K490 (the diffuse attenuation coefficient at 490 nm), and PAR (photosynthetically available radiation). Additionally, MODIS alone measures Fluorescence Line Height, while Suomi-NPP/VIIRS measures Particulate Inorganic Carbon (PIC), Particulate Organic Carbon (POC), and Reflectance at 671 nm. Professor Ullman’s OSOM runs, on the other hand, model two different chlorophyll variables, named “Chlorophyll 1” and “Chlorophyll 2.” His OSOM runs are produced using CoSiNE, and the Chlorophyll 1 and 2 variables in Professor Ullman’s OSOM runs are derived from CoSiNE’s small phytoplankton and diatoms, respectively. Through this summer project, I sought to learn how well OSOM captures the real patterns in chlorophyll throughout the ocean and across time.
+
 ## **Author**
 Benny Smith<br/>
 Undergraduate, Brown University<br/>
 austin_smith@brown.edu
-
-<img width="1221" alt="Screen Shot 2020-08-25 at 11 50 23 AM" src="https://user-images.githubusercontent.com/69660053/91210103-b6a8db80-e6da-11ea-8076-47e149f48136.png">
