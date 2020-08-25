@@ -13,3 +13,5 @@ Here is a brief summary of things you can explore through code in this repositor
 Benny Smith<br/>
 Undergraduate, Brown University<br/>
 austin_smith@brown.edu
+
+<img width="1221" alt="Screen Shot 2020-08-25 at 11 50 23 AM" src="https://user-images.githubusercontent.com/69660053/91210103-b6a8db80-e6da-11ea-8076-47e149f48136.png">
