@@ -19,6 +19,8 @@ To make this comparison, I looked at OSOM runs for 2006, 2017, and 2018. I const
 
 If we compare this to all of the one-year runs, it looks like OSOM is not modelling the chlorophyll very well. Below I have graphed the sum of OSOM's "Chlorophyll 1" and "Chlorophyll 2" variables for each of the runs (including just the 1 year spinup for the 2018 run), along with an average of the three years. Here we see a large Spring bloom, a huge Summer bloom, and a smaller Fall bloom. Chlorophyll concentrations are drastically higher in the OSOM runs than anything we see in the satellite data, reaching 16 mg/m^3 in July.
 
+<img width="783" alt="Screen Shot 2020-08-25 at 11 51 19 AM" src="https://user-images.githubusercontent.com/69660053/91213110-202ae900-e6df-11ea-891c-eafb3aabf713.png">
+
 Since all three of these runs look so similar, it is likely that the results are being severely biased by the initial conditions.
 
 ## **Author**
