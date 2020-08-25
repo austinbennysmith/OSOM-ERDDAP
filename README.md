@@ -17,5 +17,7 @@ Here is a brief summary of things you can explore through code in this repositor
 
 ## **Author**
 Benny Smith
+
 Undergraduate, Brown University
+
 austin_smith@brown.edu
