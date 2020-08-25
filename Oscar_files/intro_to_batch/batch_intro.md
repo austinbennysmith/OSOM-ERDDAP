@@ -1,0 +1,1 @@
+In this folder, there is a file called hello.py that simply prints "hello world," as well as a batch script that executes it and an output file that was produced (and that I renamed) after typing sbatch batch_example.sh into the terminal.
