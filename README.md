@@ -1,5 +1,9 @@
-# OSOM-ERDDAP
-This repository contains code and data anlysis from a summer research project focused on modelling chlorophyll in the waters around Rhode Island.
-RIDDC ERDDAP server: 
-NERACOOS ERDDAP server:
-For gridded datasets, lat & lon are constrained to match a corresponding patch of the OSOM region.
+This repository contains code from an undergraduate research project conducted during the Summer of 2020. The project is centered around the Rhode Island Data Discovery Center (RIDDC) and the Ocean State Ocean Model (OSOM). Sentence about RIDDC. As part of RIDDC, there is an ERDDAP server with a wealth of datasets relating to Narragansett Bay and surrounding waters. OSOM was built primarily by Professor Dave Ullman at the University of Rhode Island using the Regional Ocean Modeling System (ROMS). OSOM models a relatively small part of the ocean that includes Narragansett Bay and waters near Long Island, Martha’s Vineyard, and Nantucket Island.
+
+Here is a brief summary of things you can explore through code in this repository:
+•	Examples of how to visualize and analyze data stored in the RIDDC ERDDAP server
+•	Spatial averages, climatologies, and anomalies for plankton-related variables in the ERDDAP server
+•	EOF analyses of these variables
+•	Comparisons data produced by different satellites
+•	Comparisons between observations available in the ERDDAP server and OSOM output
+•	Other types of RIDDC ERDDAP data such as salinity, sea surface temperature, and wind [stress](https://www.wikipedia.org)
