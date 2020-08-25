@@ -23,6 +23,8 @@ If we compare this to all of the one-year runs, it looks like OSOM is not modell
 
 Since all three of these runs look so similar, it is likely that the results are being severely biased by the initial conditions. Below we see that in the 2-year 2018 run, the second year begins to show different behavior.
 
+<img width="844" alt="Screen Shot 2020-08-25 at 2 41 04 PM" src="https://user-images.githubusercontent.com/69660053/91214577-4487c500-e6e1-11ea-9397-71234d937d48.png">
+
 ## **Author**
 Benny Smith<br/>
 Undergraduate, Brown University<br/>
