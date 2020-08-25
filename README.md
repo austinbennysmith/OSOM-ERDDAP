@@ -13,4 +13,5 @@ Here is a brief summary of things you can explore through code in this repositor
 •	Comparisons between observations available in the ERDDAP server and OSOM output
 
 •	Other types of RIDDC ERDDAP data such as salinity, sea surface temperature, and wind stress
+
 ##Author
