@@ -25,6 +25,8 @@ Since all three of these runs look so similar, it is likely that the results are
 
 <img width="844" alt="Screen Shot 2020-08-25 at 2 41 04 PM" src="https://user-images.githubusercontent.com/69660053/91214577-4487c500-e6e1-11ea-9397-71234d937d48.png">
 
+See the various Python notebooks above for higher-resolution averages and climatologies, scaling between the MODIS and Suomi-NPP/VIIRS data, code for working with the OSOM output, and other types of analysis such as Empirical Orthogonal Functions.
+
 ## **Author**
 Benny Smith<br/>
 Undergraduate, Brown University<br/>
