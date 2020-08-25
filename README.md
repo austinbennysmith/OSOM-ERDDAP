@@ -16,3 +16,6 @@ Here is a brief summary of things you can explore through code in this repositor
 •	Other types of RIDDC ERDDAP data such as salinity, sea surface temperature, and wind stress
 
 ## **Author**
+Benny Smith
+Undergraduate, Brown University
+austin_smith@brown.edu
