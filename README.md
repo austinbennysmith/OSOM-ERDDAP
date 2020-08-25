@@ -5,7 +5,7 @@ Here is a brief summary of things you can explore through code in this repositor
 •	Examples of how to visualize and analyze data stored in the RIDDC ERDDAP server<br/>
 •	Spatial averages, climatologies, and anomalies for plankton-related variables in the ERDDAP server<br/>
 •	EOF analyses of these variables<br/>
-•	Comparisons data produced by different satellites<br/>
+•	Comparisons of data produced by different satellites<br/>
 •	Comparisons between observations available in the ERDDAP server and OSOM output<br/>
 •	Other types of RIDDC ERDDAP data such as salinity, sea surface temperature, and wind stress
 
