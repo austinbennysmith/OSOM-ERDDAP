@@ -6,6 +6,5 @@ Once the data was moved around into the correct locations, I wrote Python and ba
 
 There are also some miscellaneous items in this folder:
 - checking_things.py shows how to look at the dimensions and other details of a netcdf file
-- chl1_2017_depths1-6.out is output from a program that printed a list of times and chlorophyll averages (per day, not per time stamp) at multiple depth levels. I haven't really used this output file for anything.
+- The [daily_means](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/daily_means) folder contains code that takes the average of chlorophyll at all points in space and time per day (so the code produces 365 data points that can be graphed). Within this folder, chl1_2017_depths1-6.out is output from one of the scripts.
 - the [trying_eof_analysis](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/trying_eof_analysis) folder contains a few bits of code that start to work with EOFs and the OSOM data. To be expanded upon later.
-- 
