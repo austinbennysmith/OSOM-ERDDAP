@@ -9,3 +9,5 @@ There are also some miscellaneous items in this folder:
 - The [daily_means](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/daily_means) folder contains code that takes the average of chlorophyll at all points in space and time per day (so the code produces 365 data points that can be graphed). Within this folder, chl1_2017_depths1-6.out is some of the output from one of the scripts.
 - the [trying_eof_analysis](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/trying_eof_analysis) folder contains a few bits of code that start to work with EOFs and the OSOM data. To be expanded upon later.
 - the [intro_to_batch](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/intro_to_batch) folder shows the basics of how batch scripts work using a hello world program
+
+*Unlike the satellite data, I have not included many images of the graphs produced by the code in this folder. I have such images save to Google Drive. If I end up re-running the code here in the future, I'll try to make sure the images are stored here*
