@@ -1,5 +1,5 @@
 import matplotlib
-#matplotlib.use('Agg')
+#matplotlib.use('Agg') #this line allows me to safe figures in Oscar
 import matplotlib.pyplot as plt
 import datetime
 from datetime import datetime, timedelta
@@ -81,11 +81,11 @@ plt.ylabel('Chlorophyll (mg m^-3)')
 plt.title('OSOM Chlorophyll, 2018 run')
 plt.show()'''
 
-#I think the following just 
+#The following graphs the three one-year runs (including ONLY the 2017 spinup for the 2018 run).
 '''timearray = filedictionary['Chlorophyll1_2018_surf'][0]
 chlorophyll1 = filedictionary['Chlorophyll1_2018_surf'][1]
 chlorophyll2 = filedictionary['Chlorophyll2_2018_surf'][1]
-timearray_2017 = timearray[:int(len(timearray)/2)]
+timearray_2017 = timearray[:int(len(timearray)/2)] #the /2 piece here and in the following lines is to get JUST the 2017 data from the 2018 run. I want to use the length of the 2017 run used for the 2018 spinup as the time list for the actual 2017 run as well, as defined in this line, because (if I remember correctly) the 2017 run only goes to December 25, while the 2017 spinup for the 2018 run is the whole year.
 timearray_2018 = timearray[int(len(timearray)/2):]
 chlorophyll1_2017 = chlorophyll1[:int(len(chlorophyll1)/2)]
 chlorophyll1_2018 = chlorophyll1[int(len(chlorophyll1)/2):]
@@ -93,14 +93,15 @@ chlorophyll2_2017 = chlorophyll2[:int(len(chlorophyll2)/2)]
 chlorophyll2_2018 = chlorophyll2[int(len(chlorophyll2)/2):]
 chlorophyllsum = []
 for m in range(len(timearray)):
-	chlorophyllsum.append(chlorophyll1[m] + chlorophyll2[m])
+	chlorophyllsum.append(chlorophyll1[m] + chlorophyll2[m]) #getting the sum
 chlorophyllsum_2017 = chlorophyllsum[:int(len(chlorophyllsum)/2)]
 chlorophyllsum_2018 = chlorophyllsum[int(len(chlorophyllsum)/2):]
+#the following dictionary can be referenced in a for loop to do graphing
 graphing_dict = {'both_years':[timearray, chlorophyll1, chlorophyll2, chlorophyllsum, 'OSOM Chlorophyll, 2018 run with 2017'],
 		 'year_2017':[timearray_2017, chlorophyll1_2017, chlorophyll2_2017, chlorophyllsum_2017, 'OSOM Chlorophyll, 2018 run spinup'],
 		 'year_2018':[timearray_2018, chlorophyll1_2018, chlorophyll2_2018, chlorophyllsum_2018, 'OSOM Chlorophyll, 2018 run without 2017']
 }
-for w in graphing_dict:
+for w in graphing_dict: #making the graph
 	time_now = graphing_dict[w][0]
 	chlorophyll1_now = graphing_dict[w][1]
 	chlorophyll2_now = graphing_dict[w][2]
@@ -116,6 +117,7 @@ for w in graphing_dict:
 	plt.title(graphing_dict[w][4])
 	plt.savefig('/users/asmit101/data/stuff/'+w+'.png')'''
 
+#the following graphs the averages for all 3 of the one-year runs (so the 2018 run data is used here with ONLY the 2017 spinup), as well as an average of the three graphs.
 graph_dictionary = {'2006':{},
 		    '2017':{},
 		    '2018':{}		
