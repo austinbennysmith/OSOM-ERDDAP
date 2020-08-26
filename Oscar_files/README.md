@@ -10,4 +10,4 @@ There are also some miscellaneous items in this folder:
 - the [trying_eof_analysis](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/trying_eof_analysis) folder contains a few bits of code that start to work with EOFs and the OSOM data. To be expanded upon later.
 - the [intro_to_batch](https://github.com/austinbennysmith/OSOM-ERDDAP/tree/master/Oscar_files/intro_to_batch) folder shows the basics of how batch scripts work using a hello world program
 
-*Unlike the satellite data, I have not included many images of the graphs produced by the code in this folder. I have such images save to Google Drive. If I end up re-running the code here in the future, I'll try to make sure the images are stored here as .png files.*
+*Unlike the satellite data, I have not included many images of the graphs produced by the code in this folder. I have such images saved to Google Drive. If I end up re-running the code here in the future, I'll try to make sure the images are stored here as .png files.*
