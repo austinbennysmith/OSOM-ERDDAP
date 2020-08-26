@@ -7,4 +7,5 @@ Once the data was moved around into the correct locations, I wrote Python and ba
 There are also some miscellaneous files in this folder:
 - checking_things.py shows how to look at the dimensions and other details of a netcdf file
 - chl1_2017_depths1-6.out is output from a program that printed a list of times and chlorophyll averages (per day, not per time stamp) at multiple depth levels. I haven't really used this output file for anything.
+- eof_2017.py does EOF analysis of a single day of OSOM chlorophyll output. I'd like to expand this program and do EOF analysis of the combined year-long netcdf files.
 - 
