@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from matplotlib.dates import DateFormatter
 
+#getting into the output files:
 file2006_1 = open('/users/asmit101/data/stuff/Chlorophyll1_2006_surf.out', 'r')
 file2006_2 = open('/users/asmit101/data/stuff/Chlorophyll2_2006_surf.out', 'r')
 file2017_1 = open('/users/asmit101/data/stuff/Chlorophyll1_2017_surf.out', 'r')
@@ -13,21 +14,22 @@ file2017_2 = open('/users/asmit101/data/stuff/Chlorophyll2_2017_surf.out', 'r')
 file2018_1 = open('/users/asmit101/data/stuff/Chlorophyll1_2018_surf.out', 'r')
 file2018_2 = open('/users/asmit101/data/stuff/Chlorophyll2_2018_surf.out', 'r')
 
+#stringlist will be useful for organizing the datasets
 stringlist = ['Chlorophyll1_2006_surf', 'Chlorophyll2_2006_surf', 'Chlorophyll1_2017_surf', 'Chlorophyll2_2017_surf', 'Chlorophyll1_2018_surf', 'Chlorophyll2_2018_surf']
-yearlist = ['2006', '2017', '2018']
-allmyfiles = [file2006_1, file2006_2, file2017_1, file2017_2, file2018_1, file2018_2]
+yearlist = ['2006', '2017', '2018'] #this helps for for loops and stuff
+allmyfiles = [file2006_1, file2006_2, file2017_1, file2017_2, file2018_1, file2018_2] #I'll want to loop through the files
 for z in range(len(allmyfiles)):
-	allmyfiles[z] = allmyfiles[z].readlines()
+	allmyfiles[z] = allmyfiles[z].readlines() #the .readlines() function makes a list whose items are the lines of the file. I think this should have a bunch of elements,  but almost all of them are datetimes that were printed by the Python script that produced the output file. The second-to-last line is a list of chlorophyll averages, and the last line is a list of datetimes. Those are the lines we care about.
 print(len(allmyfiles))
-filedictionary = {}
-for x in range(len(allmyfiles)):
-	if x == 0 or x == 1:
+filedictionary = {} #the keys of this dictionary will be the filenames as listed in stringlist. The values will be lists of the time lists and chlorophyll lists
+for x in range(len(allmyfiles)): #looping through the files
+	if x == 0 or x == 1: #this helps with datetime stuff. I need to convert time stamp from "years since" to the actual date. 2 of the files are 2006, which is 36 years after 1970
 		howmanyyears = 36
-	else:
+	else: #the other files start in 2017 (though obviously the 2018 run goes through 2018 too, after being spun up with a 2017 run)
 		howmanyyears = 47
-	li = list(allmyfiles[x][-1].split(', d'))
-	chl = list(allmyfiles[x][-2].split(', '))
-	for j in range(len(chl)):
+	li = list(allmyfiles[x][-1].split(', d')) #making a list of times by splitting up the datetime.datetime element in allmyfiles[x] in the spots where there's a ', d'. See the output files to see what I mean.
+	chl = list(allmyfiles[x][-2].split(', ')) #making a list of chlorophyll averages by splitting up the chlorophyll element in allmyfiles[x] in the spots where there's a comma. See the output files to see what I mean.
+	for j in range(len(chl)): #formatting the lists so that I can use them for graphing
         	chl[j] = chl[j].replace('[', '')
         	chl[j] = chl[j].replace(']\n', '')
         	chl[j] = float(chl[j])
@@ -38,10 +40,11 @@ for x in range(len(allmyfiles)):
         	li[j] = li[j].replace('d', '')
         	li[j] = li[j].replace(')', '')
         	li[j] = datetime.strptime(li[j], "%Y, %m, %d, %H, %M")
-        	li[j] = li[j] + timedelta(hours=5)
-        	li[j] = li[j] + relativedelta(years=howmanyyears)
+        	li[j] = li[j] + timedelta(hours=5) #due to time zone weirdness, you need to add 5 hours to the output
+        	li[j] = li[j] + relativedelta(years=howmanyyears) #the relativedelta module is helpful for working with years in datetime.
 	filedictionary[stringlist[x]] = [li, chl]
 
+#below I make graphs for each of the years, and also graph the sum of Chlorophyll 1 and 2 (calculated within the following lines)
 '''for k in yearlist:
 	for j in filedictionary:
 		if k in j:
@@ -63,6 +66,7 @@ for x in range(len(allmyfiles)):
 	plt.title('OSOM Chlorophyll, '+k+' run')
 	plt.savefig('/users/asmit101/data/stuff/OSOM_Chlorophyll_'+k+'.png')'''
 
+#below I make the graph again for 2018, with a formatting tweak
 '''fig, ax = plt.subplots()
 fig.autofmt_xdate()
 plt.plot(filedictionary['Chlorophyll1_2018_surf'][0], filedictionary['Chlorophyll1_2018_surf'][1], label = 'Chlorophyll 1')
@@ -77,6 +81,7 @@ plt.ylabel('Chlorophyll (mg m^-3)')
 plt.title('OSOM Chlorophyll, 2018 run')
 plt.show()'''
 
+#I think the following just 
 '''timearray = filedictionary['Chlorophyll1_2018_surf'][0]
 chlorophyll1 = filedictionary['Chlorophyll1_2018_surf'][1]
 chlorophyll2 = filedictionary['Chlorophyll2_2018_surf'][1]
